@@ -1,11 +1,5 @@
 <?php
-$scan = scandir("./stat");
-foreach ($scan as $fichier) {
-    if ($scan !== ".." && $scan !== ".") {
-        $fichiers[] = $fichier;
-    }
-}
-file_put_contents("teste.json", json_encode($fichiers));
+file_get_contents("./stats")
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +12,7 @@ file_put_contents("teste.json", json_encode($fichiers));
 
 <body>
     <?php foreach ($fichiers as $fichier) : ?>
-        <h1><?php echo ($fichier; ?></h1>
+        <h1><?php echo $fichier; ?></h1>
         <table>
 
         </table>
