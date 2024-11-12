@@ -1,6 +1,4 @@
-<?php
-file_get_contents("./stats")
-?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,15 +6,10 @@ file_get_contents("./stats")
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
+    </he Fad>
 
 <body>
-    <?php foreach ($fichiers as $fichier) : ?>
-        <h1><?php echo $fichier; ?></h1>
-        <table>
-
-        </table>
-        <?php endforeach; ?>
+    <h1>Statistique de visite du site <a href="https://associationvisionere.fr">Vision'ère</a></h1>
 </body>
 
 </html>
