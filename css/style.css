@@ -8,3 +8,14 @@ div{
     margin-top: 3rem;
     margin-top: 3rem;
 }
+table{
+    border: solid black 1px;
+    border-collapse: collapse;
+}
+th{
+    border: solid black 1px;
+    color: red;
+}
+td{
+    border: solid black 1px;
+}
