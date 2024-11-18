@@ -1,4 +1,12 @@
+<?php
+if ($_GET["code"] == "Vision3745") {
+    # code...
+} else {
+    # code...
+}
 
+require "./function.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +18,12 @@
 
 <body>
     <h1>Statistique de visite du site <a href="https://associationvisionere.fr">Vision'ère</a></h1>
+    <?php
+echo csvToHtml("appareils");
+
+
+
+    ?>
 </body>
 
 </html>
