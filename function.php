@@ -1,28 +1,14 @@
 <?php
 function csvToHtml($_fileName)
 {
-$fileName = "./stat/$_fileName.csv"; 
+    $fileName = "./stat/$_fileName.csv";
     $file = file_get_contents($fileName);
     $file = explode("\n", $file);
-    $htmlTable = "<div class='$_fileName'><table><thead><tr>";
-    $thead = explode(",", $file[0]);
-    foreach ($thead as $collTitle) {
-        $htmlTable .= "<th>$collTitle</th>";
+    $htmlTable = "<table><thead>";
+    $htmlTable .= "<tr>". "<th>". str_replace(",","</th><th>",$file[0]). "</th></tr>";
+    $htmlTable .= "</thead><tbody>";
+    for ($i=1; $i <count($file) ; $i++) { 
+    $htmlTable .= "<tr>". "<td>". str_replace(",","</td><td>",$file[$i]). "</td></tr>";
     }
-    $htmlTable .= "</tr></thead><tbody>";
-    for ($i = 1; $i < count($file); $i++) {
-        $line = explode(",", $file[$i]);
-        foreach ($line as $l) {
-            $htmlTable .= "<td>" . $line[$i] . "</td>";
-        }
-    }
-    $htmlTable .= "</tbody></table></div>";
-
-
-
-
-
-
-    $htmlTable .= "</table>";
     return $htmlTable;
 }
