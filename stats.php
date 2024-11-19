@@ -13,6 +13,12 @@ require "./function.php";
 
 <body>
     <h1>Statistique de visite du site <a href="https://associationvisionere.fr">Vision'ère</a></h1>
+    <ul>
+        <li><a href="">Date</a></li>
+        <li><a href="">Requêtes</a></li>
+        <li><a href="">appareils</a></li>
+        <li><a href="">Pages</a></li>
+    </ul>
     <div class="dates">
         <h2>Date</h2>
         <?php echo csvToHtml("dates"); ?>
@@ -28,7 +34,6 @@ require "./function.php";
         <?php echo csvToHtml("pays"); ?>
     </div>
     <div class="">
-        <?php echo csvToHtml("appareils"); ?>
     </div>
     <div class="page">
         <?php echo csvToHtml("Page"); ?>
