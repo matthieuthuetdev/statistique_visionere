@@ -10,5 +10,6 @@ function csvToHtml($_fileName)
     for ($i=1; $i <count($file) ; $i++) { 
     $htmlTable .= "<tr>". "<td>". str_replace(",","</td><td>",$file[$i]). "</td></tr>";
     }
+    $htmlTable .= "</tbody></table>";
     return $htmlTable;
 }
