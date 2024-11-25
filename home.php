@@ -1,0 +1,1 @@
+<p>Cliquez sur un des lien ci-dessus afin de voir les statistique du site par catégorie.</p>
