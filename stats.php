@@ -13,31 +13,20 @@ require "./function.php";
 
 <body>
     <h1>Statistique de visite du site <a href="https://associationvisionere.fr">Vision'ère</a></h1>
+    <h2>Liste des statistiques disponibles</h2>
+    <p>Cliquez sur un des liens afin de voir les statistiques de votre choix.</p>
     <ul>
-        <li><a href="#" class="dates">Date</a></li>
-        <li><a href="#" class="requetes">Requêtes</a></li>
-        <li><a href="#" class="appareils">Appareils</a></li>
-        <li><a href="#" class="Pays">Pays</a></li>
-        <li><a href="#" class="pages">Pages</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=Dates" class="dates">Date</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=Requestes" class="requetes">Requêtes</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=Appareils" class="appareils">Appareils</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=Pays" class="Pays">Pays</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=Pages" class="pages">Pages</a></li>
     </ul>
-    <div class="dates">
-        <h2>Date</h2>
-        <?php echo csvToHtml("Dates"); ?>
-    </div>
-    <div class="requetes">
-        <h2>Requêtes</h2>
-        <?php echo csvToHtml("Requêtes"); ?>
-    </div>
-    <div class="appareils">
-        <?php echo csvToHtml("appareils"); ?>
-    </div>
-    <div class="pays">
-        <?php echo csvToHtml("pays"); ?>
-    </div>
-    <div class="page">
-        <?php echo csvToHtml("Page"); ?>
-    </div>
-
+    <?php
+if (isset($_GET["table"]) && file_exists("./table/".$_GET["table"].".php")) {
+    require "./table/".$_GET["table"].".php";
+}
+    ?>
 </body>
 
 </html>
