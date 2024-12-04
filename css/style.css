@@ -1,23 +1,27 @@
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
-body{
-    font-size: 1.6rem;
+body {
+  font-size: 1.6rem;
 }
-div{
-    margin-top: 3rem;
-    margin-top: 3rem;
+div {
+  margin-top: 3rem;
+  margin-top: 3rem;
 }
-table{
-    border: solid black 1px;
-    border-collapse: collapse;
+table {
+  border: solid black 1px;
+  border-collapse: collapse;
 }
-th{
-    border: solid black 1px;
-    color: red;
-    padding-left: 1rem;
-    padding-right: 1rem;
+th {
+  border: solid black 1px;
+  background-color: red;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
-td{
-    border: solid black 1px;
+td {
+  border: solid black 1px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+>>>>>>> cdbef0292485ebc54c097d3f40bdd2d41829cfe0
 }

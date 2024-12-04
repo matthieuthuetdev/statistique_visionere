@@ -13,20 +13,21 @@ require "./function.php";
 
 <body>
     <h1>Statistique de visite du site <a href="https://associationvisionere.fr">Vision'ère</a></h1>
+    <h2>Liste des statistiques disponibles</h2>
+    <p>Cliquez sur un des liens afin de voir les statistiques de votre choix.</p>
     <ul>
-        <li><a href="stats.php?code=Vision3745&table=dates" id="dates">Date</a></li>
-        <li><a href="stats.php?code=Vision3745&table=requestes" id="requetes">Requêtes</a></li>
-        <li><a href="stats.php?code=Vision3745&table=appareils" id="appareils">Appareils</a></li>
-        <li><a href="stats.php?code=Vision3745&table=pays" id="pays">Pays</a></li>
-        <li><a href="stats.php?code=Vision3745&table=pages" id="pages">Pages</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=Dates" class="dates">Date</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=Requestes" class="requetes">Requêtes</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=Appareils" class="appareils">Appareils</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=Pays" class="Pays">Pays</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=Pages" class="pages">Pages</a></li>
     </ul>
-<?php 
-if (isset($_GET["table"]) && file_exists("./htmlTable/".$_GET["table"].".php") ) {
-    require "./htmlTable/".$_GET["table"].".php";
-}else{
-    require "./home.php";
+    <?php
+if (isset($_GET["table"]) && file_exists("./table/".$_GET["table"].".php")) {
+    require "./table/".$_GET["table"].".php";
 }
-?>
+    ?>
+>>>>>>> cdbef0292485ebc54c097d3f40bdd2d41829cfe0
 </body>
 
 </html>
