@@ -22,12 +22,23 @@ require "./function.php";
         <li><a href="index.php?pwd=Vision3745&table=Pays" class="Pays">Pays</a></li>
         <li><a href="index.php?pwd=Vision3745&table=Pages" class="pages">Pages</a></li>
     </ul>
+    <div id="info">
+        <h1>
+            infos
+        </h1>
+        <ul>
+            <li>
+                Le nombre d'impression correspond au nombre de fois où le site est apparu dans les résultats de recherche d'un utilisateur. </li>
+            <li>
+                Le CTR correspond au nombre total de personnes qui ont vu le site dans une de leurs recherches et qui ont cliqué sur le site.
+            </li>
+        </ul>
+    </div>
     <?php
-if (isset($_GET["table"]) && file_exists("./table/".$_GET["table"].".php")) {
-    require "./table/".$_GET["table"].".php";
-}
+    if (isset($_GET["table"]) && file_exists("./table/" . $_GET["table"] . ".php")) {
+        require "./table/" . $_GET["table"] . ".php";
+    }
     ?>
->>>>>>> cdbef0292485ebc54c097d3f40bdd2d41829cfe0
 </body>
 
 </html>
