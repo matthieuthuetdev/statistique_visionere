@@ -16,11 +16,11 @@ require "./function.php";
     <h2>Liste des statistiques disponibles</h2>
     <p>Cliquez sur un des liens afin de voir les statistiques de votre choix.</p>
     <ul>
-        <li><a href="index.php?pwd=Vision3745&table=Dates" class="dates">Date</a></li>
-        <li><a href="index.php?pwd=Vision3745&table=Requestes" class="requetes">Requêtes</a></li>
-        <li><a href="index.php?pwd=Vision3745&table=Appareils" class="appareils">Appareils</a></li>
-        <li><a href="index.php?pwd=Vision3745&table=Pays" class="Pays">Pays</a></li>
-        <li><a href="index.php?pwd=Vision3745&table=Pages" class="pages">Pages</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=dates" class="dates">Date</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=requestes" class="requetes">Requêtes</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=appareils" class="appareils">Appareils</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=pays" class="Pays">Pays</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=pages" class="pages">Pages</a></li>
     </ul>
     <div id="info">
         <h1>
