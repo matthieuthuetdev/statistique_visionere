@@ -37,6 +37,8 @@ require "./function.php";
     <?php
     if (isset($_GET["table"]) && file_exists("./table/" . $_GET["table"] . ".php")) {
         require "./table/" . $_GET["table"] . ".php";
+    }else {
+        echo "le fichier ".$_GET["table"]." n'éxiste pas.";
     }
     ?>
 </body>
