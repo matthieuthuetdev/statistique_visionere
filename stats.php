@@ -1,4 +1,12 @@
 <?php
+if (!isset($_GET["pwd"]) || $_GET["pwd"] != "Vision3745") {
+    header("location: ./error.php");
+} else {
+    
+}
+?>
+
+<?php
 require "./function.php";
 ?>
 <!DOCTYPE html>
@@ -17,10 +25,10 @@ require "./function.php";
     <p>Cliquez sur un des liens afin de voir les statistiques de votre choix.</p>
     <ul>
         <li><a href="index.php?pwd=Vision3745&table=dates" class="dates">Date</a></li>
-        <li><a href="index.php?pwd=Vision3745&table=requestes" class="requetes">Requêtes</a></li>
-        <li><a href="index.php?pwd=Vision3745&table=appareils" class="appareils">Appareils</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=requestes" class="Requetes">Requêtes</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=appareils" class="Appareils">Appareils</a></li>
         <li><a href="index.php?pwd=Vision3745&table=pays" class="Pays">Pays</a></li>
-        <li><a href="index.php?pwd=Vision3745&table=pages" class="pages">Pages</a></li>
+        <li><a href="index.php?pwd=Vision3745&table=pages" class="Pages">Pages</a></li>
     </ul>
     <div id="info">
         <h1>
@@ -35,10 +43,8 @@ require "./function.php";
         </ul>
     </div>
     <?php
-    if (isset($_GET["table"]) && file_exists("./table/" . $_GET["table"] . ".php")) {
+    if (isset($_GET["table"]) && array_search($_GET["table"].".php",scandir("./table/"))) {
         require "./table/" . $_GET["table"] . ".php";
-    }else {
-        echo "le fichier ".$_GET["table"]." n'éxiste pas.";
     }
     ?>
 </body>
