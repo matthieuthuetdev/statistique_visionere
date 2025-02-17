@@ -1,14 +1,20 @@
 <?php
+require "./function.php";
 if (!isset($_GET["pwd"]) || $_GET["pwd"] != "Vision3745") {
     header("location: ./error.php");
 } else {
-    
 }
+if (isset($_GET["table"]) && array_search($_GET["table"] . ".php", scandir("./table/"))) {
+    ob_start();
+    require "./table/" . $_GET["table"] . ".php";
+    $table = ob_get_clean();
+    $link = "<a href='#stat' id='invisibler'>aller au comptenu principale</a>";
+}else{
+    $link = "";
+}
+
 ?>
 
-<?php
-require "./function.php";
-?>
 <!DOCTYPE html>
 <html lang="fr-fr">
 
@@ -20,6 +26,7 @@ require "./function.php";
     <script src="./js/script.js"></script>
 
 <body>
+    <?php echo $link; ?>
     <h1>Statistique de visite du site <a href="https://associationvisionere.fr">Vision'ère</a></h1>
     <h2>Liste des statistiques disponibles</h2>
     <p>Cliquez sur un des liens afin de voir les statistiques de votre choix.</p>
@@ -43,9 +50,7 @@ require "./function.php";
         </ul>
     </div>
     <?php
-    if (isset($_GET["table"]) && array_search($_GET["table"].".php",scandir("./table/"))) {
-        require "./table/" . $_GET["table"] . ".php";
-    }
+    echo $table;
     ?>
 </body>
 
