@@ -8,7 +8,7 @@ if (isset($_GET["table"]) && array_search($_GET["table"] . ".php", scandir("./ta
     ob_start();
     require "./table/" . $_GET["table"] . ".php";
     $table = ob_get_clean();
-    $link = "<a href='#stat' id='invisibler'>aller au comptenu principale</a>";
+    $link = "<a href='#stat' id='evitement'>aller au comptenu principale</a>";
 }else{
     $link = "";
 }
