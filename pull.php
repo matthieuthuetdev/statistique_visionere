@@ -1,3 +1,6 @@
 <?php
 $result = exec("git pull");
-var_export($result);
+foreach($result as $line){
+    echo $line;
+    sleep(0.1);
+}
