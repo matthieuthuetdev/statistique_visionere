@@ -28,6 +28,7 @@ if (isset($_GET["table"]) && array_search($_GET["table"] . ".php", scandir("./ta
 <body>
     <?php echo $link; ?>
     <h1>Statistique de visite du site <a href="https://associationvisionere.fr">Vision'ère</a></h1>
+    <a href="./form.php">Suggérer des mots-clés</a>
     <h2>Liste des statistiques disponibles</h2>
     <p>Cliquez sur un des liens afin de voir les statistiques de votre choix.</p>
     <ul>
@@ -36,7 +37,6 @@ if (isset($_GET["table"]) && array_search($_GET["table"] . ".php", scandir("./ta
         <li><a href="index.php?pwd=Vision3745&table=appareils" class="Appareils">Appareils</a></li>
         <li><a href="index.php?pwd=Vision3745&table=pays" class="Pays">Pays</a></li>
         <li><a href="index.php?pwd=Vision3745&table=pages" class="Pages">Pages</a></li>
-        <a href="./form.php">Suggérer des mots-clés</a>
     </ul>
     <div id="info">
         <h1>
