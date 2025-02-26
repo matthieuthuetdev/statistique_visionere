@@ -9,7 +9,7 @@ if (isset($_GET["table"]) && array_search($_GET["table"] . ".php", scandir("./ta
     require "./table/" . $_GET["table"] . ".php";
     $table = ob_get_clean();
     $link = "<a href='#stat' id='evitement'>aller au comptenu principale</a>";
-}else{
+} else {
     $link = "";
 }
 
@@ -36,6 +36,7 @@ if (isset($_GET["table"]) && array_search($_GET["table"] . ".php", scandir("./ta
         <li><a href="index.php?pwd=Vision3745&table=appareils" class="Appareils">Appareils</a></li>
         <li><a href="index.php?pwd=Vision3745&table=pays" class="Pays">Pays</a></li>
         <li><a href="index.php?pwd=Vision3745&table=pages" class="Pages">Pages</a></li>
+        <a href="./form.php">Suggérer des mots-clés</a>
     </ul>
     <div id="info">
         <h1>
